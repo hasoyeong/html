@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="event.js"></script>
+    <style>
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        width: 150px;
+        height: 40px;
+        border: 1px solid gray;
+        text-align: center;
+        line-height: 40px;
+        display: inline-block;
+      }
+      .blank {
+        width: 600px;
+        height: 600px;
+        background-color: palegoldenrod;
+      }
+      #weap {
+        width: 500px;
+        margin: auto;
+      }
+      img {
+        width: 100%;
+      }
+      .over {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+      }
+      .relative {
+        position: relative;
+      }
+      #desc {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li onclick="changeBg('green')">Green</li>
+      <li onclick="changeBg('Orange')">Orange</li>
+      <li onclick="changeBg('Purple')">Purple</li>
+    </ul>
+    <div class="blank" id="result"></div>
+
+    <div id class="weap">
+      <div class="relative">
+        <img
+          src="https://cdn.pixabay.com/photo/2019/08/09/13/51/boat-4395122_1280.jpg"
+          alt="이미지"
+        />
+        <button class="over" id="open" onclick="openDesc()">
+          상세 설명보기
+        </button>
+      </div>
+      <div id="desc" class="detail">
+        <p>
+          (서울=연합뉴스) 성서호 기자 = 개원의와 의대 교수들 사이에서 집단휴진이
+          확산하는 가운데 정부와 국회가 가장 먼저 전면 휴진을 선언한 서울대
+          의대·병원 교수들과 잇따라 접촉하고 있다. 국무총리에 이어 국회도
+          서울의대·병원 교수 비상대책위원회와 만나기로 하면서 집단휴진 사태
+          해결의 실마리를 찾을 수 있을지 관심이 쏠린다. 13일 의료계와 국회 등에
+          따르면 국회 보건복지위원회 소속 의원들은 오는 16일 서울의대·병원 교수
+          비대위와 대화 테이블에 앉는다. 이날은 서울의대·병원 교수들의 무기한
+          휴진 시작 하루 전날이다.
+        </p>
+        <button id="close" onclick="closeDesc()">상세설명닫기</button>
+      </div>
+    </div>
+  </body>
+</html>
